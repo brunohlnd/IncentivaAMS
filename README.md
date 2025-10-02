@@ -4,8 +4,8 @@ Este repositório é dedicado ao site oficial do Projeto Incentiva AMS. Nossa in
 ### 🎯 Objetivo Central do Projeto
 O principal foco do "Incentiva AMS" é apoiar e motivar futuros estudantes da Etec. Buscamos compartilhar nossa experiência de primeiro e segundo ano, fornecendo informações claras sobre:
  * O que esperar do curso AMS (Ensino Médio + Técnico + Superior).
- * Os desafios e as grandes oportunidades que ele oferece.
- * Por que o esforço para conquistar uma vaga no curso AMS é recompensado.
+ - Os desafios e as grandes oportunidades que ele oferece.
+ + Por que o esforço para conquistar uma vaga no curso AMS é recompensado.
 
 📢 Por que Este Projeto é Necessário?
 Ao longo do ano, percebemos que muitos candidatos e até mesmo alunos demonstram confusão em entender o valor e o diferencial do nosso curso.
