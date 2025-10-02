@@ -9,8 +9,7 @@ O principal foco do "Incentiva AMS" é apoiar e motivar futuros estudantes da Et
 
 ## 📢Por que Este Projeto é Necessário?
 Ao longo do ano, percebemos que muitos candidatos e até mesmo alunos demonstram confusão em entender o valor e o diferencial do nosso curso.
-
-##### Com a expectativa de aumento de vagas para o AMS no próximo ano, acreditamos que esta iniciativa é vital para:
+#### Com a expectativa de aumento de vagas para o AMS no próximo ano, acreditamos que esta iniciativa é vital para:
 * Evitar a Desmotivação: Garantir que os interessados tomem uma decisão informada, reduzindo a evasão e o desinteresse.
 * Gerar Maior Interesse: Destacar as vantagens exclusivas do AMS e atrair estudantes mais engajados e alinhados com o curso.
 
