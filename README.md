@@ -1,4 +1,5 @@
-# 🚀 Projeto Incentiva AMS: Experiência e Orientação para Futuros Estudantes da Etec
+# 🚀 Projeto Incentiva AMS
+## Experiência e Orientação para Futuros Estudantes da Etec
 Este repositório é dedicado ao site oficial do Projeto Incentiva AMS. Nossa iniciativa é um esforço de orientação criado por alunos para futuros alunos, com o objetivo de desmistificar e apresentar o real diferencial do curso de Articulado Médio Superior (AMS) da Etec.
 
 ## 🎯Objetivo Central do Projeto
