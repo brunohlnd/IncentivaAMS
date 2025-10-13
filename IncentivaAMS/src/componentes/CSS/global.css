@@ -1,0 +1,34 @@
+/* Global CSS */
+:root{
+    --vinho: #800116;
+    --vermelho: #CC0002;
+    --laranja:  #FF442B;
+    --amarelo:  #FAB800;
+    --preto:    #000000;
+    --cinza:    #F2F2F2;
+    --branco:   #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+  background-color: var(--cinza);
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 6% 1fr;
+    grid-template-rows: 0.5fr 4fr 0.5fr;
+    gap: 10px 10px;
+  }
+  
+  .item:nth-child(1),
+  .item:nth-child(4) {
+    grid-column: 1 / 3;
+  }
+  
+  .item:nth-child(2) {
+    align-self: stretch;
+  }

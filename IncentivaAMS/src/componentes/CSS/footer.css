@@ -1,0 +1,7 @@
+#footer {
+    background-color: var(--vinho);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+};
