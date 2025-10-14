@@ -4,7 +4,7 @@
 }
 
 .search .input {
-    background-color: #fff;
+    background-color: var(--branco);
     border: 1px solid var(--vinho);
     font-size: 16px;
     color: var(--vinho);
@@ -12,10 +12,7 @@
     height: 40px;
     width: 40px;
     transition: width 0.8s ease;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
+    border-radius: 25px;
 }
 
 .search .input::placeholder {
@@ -23,16 +20,15 @@
 }
 
 .botao {
-    background-color: #fff;
+    background-color: var(--branco);
     border: 1px solid var(--vinho);
     cursor: pointer;
     font-size: 20px;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     height: 40px;
     width: 40px;
-    transition: 0.8s ease;
     border-radius: 50%;
 }
 
@@ -41,7 +37,11 @@
 }
 
 .botao:hover {
-    background-color: var(--vermelho);
+    background-color: var(--vinho);
+}
+
+.botao:hover i {
+    color: var(--branco);
 }
 
 .botao:focus,
@@ -51,8 +51,4 @@
 
 .search.active .input {
     width: 215px;
-}
-
-.search.active .botao {
-    transform: translateX(175px);
 }
