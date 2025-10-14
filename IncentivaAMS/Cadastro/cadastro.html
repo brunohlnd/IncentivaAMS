@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="cadastro.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Bebas+Neue&family=Calistoga&family=DM+Serif+Text:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Unbounded:wght@200..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<div class="conteinerCadastro">
+
+    <div class="title">Cadastrar-se</div>
+    <div class="subtitulo">Cadastre-se para receber em tempo real as novidades do vestibulinho ETEC 2026</div>
+    <hr class="divider">
+    
+    <form method="post" action="cadastroDados.php" enctype="multipart/form-data">
+        <p></p>
+    
+    <div class="formContainer">
+        <!--Campos de entrada-->
+     <div class="input-box">
+         <div class="icons">
+             <i class="fa-solid fa-user"></i>
+             <input type="text" id="nome" name="name" placeholder=" Nome Completo"></input>
+         </div>
+
+         <p></p>
+
+         <div class="icons">
+             <i class="fa-solid fa-envelope"></i>
+             <input type="email" id="email" name="email" placeholder=" E-mail">
+         </div>
+
+        <p></p>
+
+         <div class="icons">
+             <i class="fa-solid fa-phone"></i>
+             <input type="number" id="tel" name="tel" placeholder=" Telefone">
+         </div>
+
+        <p></p>
+
+         <div class="icons">
+             <i class="fa-solid fa-lock"></i>
+             <input type="password" id="senha" name="senhaUser" placeholder=" Senha" min="8" max="10">
+         </div>
+     </div>
+        
+        <!--Submit-->
+        <div class="botoes">
+         <button type="submit" id="cadastrar">Cadastrar</button><br>
+         <button type="reset" id="limpar" onclick="limparCampos()">Limpar Campos</button>
+        </div>
+
+    </div>
+    </form>
+</div>
+
+<script src="limparCampos.js"></script>
+</body>
+</html>
