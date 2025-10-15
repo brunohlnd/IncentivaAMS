@@ -1,4 +1,4 @@
-.perfil {
+#perfil {
     background-color: #fff;
     border: 1px solid var(--vinho);
     padding: 15px;
@@ -13,15 +13,15 @@
     justify-content: center;
 }
 
-.perfil i {
+#perfil i {
     color: var(--vinho);
 }
 
-.perfil:hover {
+#perfil:hover {
     background-color: var(--vinho);
     cursor: pointer;
 }
 
-.perfil:hover i {
+#perfil:hover i {
     color: #fff;
 }
