@@ -1,7 +1,7 @@
 /*Conteiner de tudo*/
+
 .conteinerCadastro {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 3rem 3rem 0 3rem;
     width: 100%;
 }
 
@@ -13,14 +13,6 @@
     margin-bottom: 20px;
     padding-bottom: 5px;
     margin-top: 5px;
-}
-
-.title {
-    font-size: 30px;
-    color: #800115;
-    padding-top: 30px;
-    font-weight: 700;
-    font-family: "Montserrat", sans-serif;
 }
 
 .divider {
