@@ -1,0 +1,24 @@
+.MVMDiv {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+.MVMdivs {
+    height: 20rem;
+    width: 30%;
+    background-color: var(--branco);
+    padding: 2rem;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.item-img {
+    margin-bottom: 1rem;
+}
+
+#alvo {
+    width: 75px;
+    height: auto;
+    color: var(--vinho);
+}

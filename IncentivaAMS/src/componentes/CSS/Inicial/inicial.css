@@ -1,0 +1,13 @@
+.pdivs {
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+.p {
+    width: 30%;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--vinho);
+    color: var(--branco);
+}
