@@ -20,5 +20,5 @@ O site é o hub central que apoia e concentra todas as nossas ações de divulga
 
 ## ✨Tecnologias do Site
 O site é a base digital do projeto e foi desenvolvido com foco em performance e simplicidade:
-* HTML, CSS e JavaScript: Utilizados para construir uma interface leve, rápida e totalmente responsiva.
+* HTML, CSS, PHP e JavaScript: Utilizados para construir uma interface leve, rápida e totalmente responsiva.
 
