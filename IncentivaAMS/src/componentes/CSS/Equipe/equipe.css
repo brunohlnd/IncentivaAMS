@@ -1,11 +1,11 @@
-.MVMDiv {
+.MVVDiv {
     margin: 1rem 0;
     display: flex;
     justify-content: space-between;
     gap: 5%;
 }
 
-.MVMdivs {
+.MVVdivs {
     height: 20rem;
     width: 30%;
     background-color: var(--branco);
@@ -21,4 +21,31 @@
     width: 75px;
     height: auto;
     color: var(--vinho);
+}
+
+#binoculo {
+    width: 75px;
+    height: auto;
+    color: var(--vinho);
+}
+
+#coracao {
+    width: 75px;
+    height: auto;
+    color: var(--vinho);
+}
+
+.divTituloMVV {
+    display: flex;
+    align-items: center;
+    width: min-content;
+    padding: 5px;
+    background-color: var(--vinho);
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.tituloMVV {
+    font-size: 14px;
+    margin-bottom: 0;
 }

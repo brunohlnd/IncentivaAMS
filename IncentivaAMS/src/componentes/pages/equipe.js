@@ -20,12 +20,12 @@ const h1eq_2 = document.createElement('h1');
 h1eq_2.textContent = 'Missão, Visão e Valores';
 
 //MVMdiv
-const MVMDiv = document.createElement('div');
-MVMDiv.className = 'MVMDiv';
+const MVVDiv = document.createElement('div');
+MVVDiv.className = 'MVVDiv';
 
 // MISSÃO
 const divMissao = document.createElement('div');
-divMissao.className = 'MVMdivs';
+divMissao.className = 'MVVdivs';
 
 const div_alvo = document.createElement('div');
 div_alvo.className = 'item-img';
@@ -35,13 +35,37 @@ img_alvo.src = './src/img/alvo.png';
 div_alvo.appendChild(img_alvo);
 divMissao.appendChild(div_alvo);
 
+const divTituloMissao = document.createElement('div')
+divTituloMissao.className = 'divTituloMVV';
+const tituloMissao = document.createElement('h5');
+tituloMissao.className = 'tituloMVV';
+tituloMissao.textContent = 'MISSÃO';
+divTituloMissao.appendChild(tituloMissao);
+divMissao.appendChild(divTituloMissao);
+
 const pmissao = document.createElement('p');
 pmissao.textContent = 'Promover o conhecimento e a valorização do curso AMS e incentivar os estudantes a usufruírem dessa oportunidade que une ensino médio, técnico e superior!'
 divMissao.appendChild(pmissao)
 
 // VISÃO
 const divVisao = document.createElement('div')
-divVisao.className = 'MVMdivs'
+divVisao.className = 'MVVdivs'
+
+const div_binoculo = document.createElement('div');
+div_binoculo.className = 'item-img';
+const img_binoculo = document.createElement('img')
+img_binoculo.id = 'binoculo';
+img_binoculo.src = './src/img/binoculo.png';
+div_binoculo.appendChild(img_binoculo);
+divVisao.appendChild(div_binoculo);
+
+const divTituloVisao = document.createElement('div')
+divTituloVisao.className = 'divTituloMVV';
+const tituloVisao = document.createElement('h5');
+tituloVisao.className = 'tituloMVV';
+tituloVisao.textContent = 'VISÃO';
+divTituloVisao.appendChild(tituloVisao);
+divVisao.appendChild(divTituloVisao);
 
 const pvisao = document.createElement('p');
 pvisao.textContent = 'Ser reconhecido como um projeto de referência na divulgação AMS e ser levado a outras ETECs, contribuindo para que mais jovens descubram essa oportunidade'
@@ -49,15 +73,31 @@ divVisao.appendChild(pvisao)
 
 // VALORES
 const divValores = document.createElement('div');
-divValores.className = 'MVMdivs';
+divValores.className = 'MVVdivs';
+
+const div_coracao = document.createElement('div');
+div_coracao.className = 'item-img';
+const img_coracao = document.createElement('img')
+img_coracao.id = 'coracao';
+img_coracao.src = './src/img/coracao.png';
+div_coracao.appendChild(img_coracao);
+divValores.appendChild(div_coracao);
+
+const divTituloValores = document.createElement('div')
+divTituloValores.className = 'divTituloMVV';
+const tituloValores = document.createElement('h5');
+tituloValores.className = 'tituloMVV';
+tituloValores.textContent = 'VALORES';
+divTituloValores.appendChild(tituloValores);
+divValores.appendChild(divTituloValores);
 
 const pvalores = document.createElement('span');
 pvalores.textContent = 'Acolhimento e inclusão de novos alunos; Colaboração entre estudantes; Compromisso com a informação de qualidade e Responsabilidade com o que divulgamos'
 divValores.appendChild(pvalores)
 
-MVMDiv.appendChild(divMissao)
-MVMDiv.appendChild(divVisao)
-MVMDiv.appendChild(divValores)
+MVVDiv.appendChild(divMissao)
+MVVDiv.appendChild(divVisao)
+MVVDiv.appendChild(divValores)
 
 // --- Seção 3: Por que criamos o projeto?
 // Cria o terceiro <h1>
@@ -75,7 +115,7 @@ divEquipe.appendChild(p1eq);
 
 // Seção 2: Missão, Visão e Valores
 divEquipe.appendChild(h1eq_2);
-divEquipe.appendChild(MVMDiv);
+divEquipe.appendChild(MVVDiv);
 
 // Seção 3: Por que criamos o projeto?
 divEquipe.appendChild(h1eq_3);
