@@ -3,7 +3,6 @@ const equipeSection = document.getElementById('equipe');
 // Cria o elemento principal <div>
 const divEquipe = document.createElement('div');
 divEquipe.id = 'Equipe';
-divEquipe.className = 'container-sm';
 
 // --- Seção 1: Equipe
 // Cria o primeiro <h1>

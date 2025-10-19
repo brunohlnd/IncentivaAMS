@@ -3,7 +3,6 @@ const contatoSection = document.getElementById('contato');
 // Cria o elemento principal <div>
 const divContato = document.createElement('div');
 divContato.id = 'Contato';
-divContato.className = 'container-sm';
 
 // Cria o primeiro elemento <p>
 const p1ct = document.createElement('p');

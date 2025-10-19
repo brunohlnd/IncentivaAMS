@@ -17,3 +17,8 @@
     height: 50px;
     width: auto;
 }
+
+.logo {
+    position: absolute;
+    left: 1.35rem;
+}

@@ -55,13 +55,6 @@
     width: 15px;
 }
 
-.logo {
-    width: 55px;
-    height: auto;
-    position: absolute;
-    left: 1.35rem;
-}
-
 .attribute {
     position: absolute;
     bottom: 10px;

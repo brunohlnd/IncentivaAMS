@@ -3,7 +3,6 @@ const cursoSection = document.getElementById('curso');
 // Cria o elemento principal <div>
 const divCurso = document.createElement('div');
 divCurso.id = 'Curso';
-divCurso.className = 'container-sm';
 
 // --- Seção 1: O que é o AMS?
 // Cria o primeiro <h1>

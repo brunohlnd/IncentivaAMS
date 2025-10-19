@@ -5,7 +5,6 @@ const inicialSection = document.getElementById('inicio');
 // Cria o elemento principal <div>
 const divInicial = document.createElement('div');
 divInicial.id = 'Inicial';
-divInicial.className = 'container-sm';
 
 // Cria o elemento <h1>
 const h1 = document.createElement('h1');
@@ -19,29 +18,75 @@ span.textContent = 'Incentiva AMS?';
 h1.appendChild(span);
 divInicial.appendChild(h1);
 
-//Cria o grupo de divs
-const pdvis = document.createElement('div')
-pdvis.className = "pdivs";
+// Cria o grupo de divs
+const pDIV = document.createElement('div')
+pDIV.className = "pDIV";
 
-// Cria o elemento <p>
+// Div 1
+const p01div = document.createElement('div');
+p01div.className = 'pdiv'
+
+// Imagem 1
+const img_p01div = document.createElement('div');
+const img_p01 = document.createElement('img')
+img_p01.className = 'item-img-p';
+img_p01.id = 'ideia';
+img_p01.src = './src/img/ideia.png';
+img_p01div.appendChild(img_p01);
+p01div.appendChild(img_p01div);
+pDIV.appendChild(p01div)
+
+// Texto 1
 const p01 = document.createElement('p');
-p01.textContent = 'O Incentiva AMS é um projeto pensado e criado por alunas do curso com módulo AMS';
-
-const p02 = document.createElement('p');
-p02.textContent = 'Seu principal objetivo é divulgar a oportunidade única de formação integrada que ele proporciona!';
-
-const p03 = document.createElement('p');
-p03.textContent = 'Acreditamos no poder da informação para transformar o futuro de estudantes que procuram novas oportunidades, e por isso buscamos tornar o curso mais conhecido.';
-
 p01.className = "p";
+p01.textContent = 'O projeto Incentiva AMS foi criado por nós, alunas do segundo ano do curso Técnico de Informática para Internet na modalidade Articulado Médio Superior (AMS)';
+p01div.appendChild(p01)
+
+// Div 2
+const p02div = document.createElement('div');
+p02div.className = 'pdiv'
+
+// Imagem 2
+const img_p02div = document.createElement('div');
+const img_p02 = document.createElement('img')
+img_p02.className = 'item-img-p';
+img_p02.id = 'social';
+img_p02.src = './src/img/social.png';
+img_p02div.appendChild(img_p02);
+p02div.appendChild(img_p02div);
+pDIV.appendChild(p02div)
+
+// Texto 2
+const p02 = document.createElement('p');
 p02.className = "p";
+p02.textContent = 'Percebendo que o curso AMS é uma novidade na região e muitos estudantes não o conhecem bem, nosso propósito é divulgar seus detalhes por dois canais principais: por meio de palestras informativas nas escolas da região e através das redes sociais.';
+p02div.appendChild(p02)
+
+
+// Div 3
+const p03div = document.createElement('div');
+p03div.className = 'pdiv'
+
+// Imagem 3
+const img_p03div = document.createElement('div');
+const img_p03 = document.createElement('img')
+img_p03.id = 'estrela';
+img_p03.src = './src/img/estrela.png';
+img_p03div.appendChild(img_p03);
+p03div.appendChild(img_p03div);
+pDIV.appendChild(p03div)
+
+// Texto 3
+const p03 = document.createElement('p');
 p03.className = "p";
+p03.textContent = 'Nessas ações, compartilharemos tudo sobre o funcionamento do curso, seus principais diferenciais e os caminhos futuros promissores que ele pode oferecer aos alunos';
+p03div.appendChild(p03)
 
 // Adiciona os <p>s ao pdivs principal
-pdvis.appendChild(p01);
-pdvis.appendChild(p02);
-pdvis.appendChild(p03);
-divInicial.appendChild(pdvis);
+pDIV.appendChild(p01div);
+pDIV.appendChild(p02div);
+pDIV.appendChild(p03div);
+divInicial.appendChild(pDIV);
 
 
 // --- Novo Conteúdo (Trajetória AMS) ---

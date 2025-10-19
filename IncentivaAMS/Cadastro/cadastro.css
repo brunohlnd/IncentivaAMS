@@ -22,13 +22,16 @@
     width: 10;
 }
 
-input[type=text], input[type=email], input[type=number], input[type=password] {
-   width: 300px;
-   height: 40px;
-   border-radius: 15px;
-   border: 1px solid #800115;
-   padding-left: 30px; 
-   box-sizing: border-box;
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=password] {
+    width: 300px;
+    height: 40px;
+    border-radius: 15px;
+    border: 1px solid #800115;
+    padding-left: 30px;
+    box-sizing: border-box;
 }
 
 input:focus {
@@ -54,7 +57,7 @@ input[type=radio] {
     background-color: #800115;
     color: white;
     margin-top: 10px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .botao-form:hover {
@@ -70,25 +73,21 @@ input[type=radio] {
 /*Posição dos ícones*/
 .icons {
     position: relative;
-    width: 300px; 
+    width: 300px;
 }
 
 /*Estilo dos ícones*/
 .icons i {
     position: absolute;
-    top: 50%; 
+    top: 50%;
     left: 12px;
     transform: translateY(-50%);
     color: #800115;
-    font-size: 16px; 
-    pointer-events: none; 
+    font-size: 16px;
+    pointer-events: none;
 }
 
-/*.questions {
+.questions {
     font-weight: bold;
     color: #800115;
-}*/
-
-
-
-
+}

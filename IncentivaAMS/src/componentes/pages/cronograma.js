@@ -3,7 +3,6 @@ const cronogramaSection = document.getElementById('cronograma');
 // Cria o elemento principal <div>
 const divCronograma = document.createElement('div');
 divCronograma.id = 'Cronograma';
-divCronograma.className = 'container-sm';
 
 // Cria o elemento <h1>
 const h1crn = document.createElement('h1');
