@@ -40,9 +40,8 @@
 
     #btn-buscar {
       position: absolute; /* Posiciona o botão de forma absoluta em relação a .controls */
-      margin-right: 10px;
-      top: 20px; /* Começa a 50% da altura do contêiner */
-      right: 5px; /* Posição a partir da direita */
+      top: 35px; /* Começa a 50% da altura do contêiner */
+      right: 1px; /* Posição a partir da direita */
       transform: translateY(-50%); /* Move o botão para cima em 50% de sua própria altura para centralizar verticalmente */
       border: none;
       background: none; /* Remove o fundo padrão do botão */

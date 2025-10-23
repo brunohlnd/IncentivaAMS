@@ -25,13 +25,20 @@
     box-shadow: 0 8px 20px hsl(351, 100%, 95%);
 }
 
+#inputs-ia {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2%;
+}
+
 .input-ia {
-    width: 35%;
+    width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: none;
     border-bottom: 2px solid rgb(185, 0, 28);
-    margin-left: 15px;
 }
 
 .input-ia:focus{
@@ -45,6 +52,9 @@
 }
 
 .botao-ia {
+    position: relative;
+    left: 10%;
+    width: 80%;
     padding: 10px 100px;
     border: none;
     background-color: #800115;
@@ -52,7 +62,6 @@
     font-size: 16px;
     border-radius: 50px;
     cursor: pointer;
-
     margin-top: 20px;
 }
 

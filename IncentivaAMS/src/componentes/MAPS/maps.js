@@ -96,7 +96,7 @@ function inicializarMapa() {
 //cria marcadores no mapa para cada unidade
 async function carregarUnidades() {
   try {
-    const res = await fetch("src/componentes/MAPS/unidades.json");
+    const res = await fetch("./src/componentes/MAPS/unidades.json");
     if (!res.ok) throw new Error("Falha ao carregar unidades.json");
     const json = await res.json();
     const unidades = json.unidades || [];
