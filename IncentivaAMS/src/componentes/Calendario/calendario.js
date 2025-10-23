@@ -60,3 +60,4 @@ fetch(url)
     .catch(err => console.error('Erro ao buscar eventos: ', err));
 
 });
+

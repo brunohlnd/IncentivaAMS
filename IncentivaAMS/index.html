@@ -32,7 +32,7 @@
 
   <link rel="stylesheet" href="./src/componentes/IA/ia.css" />
 
-  <link rel="stylesheet" href="./src/componentes/pages/Curso/curso.css"/>
+  <link rel="stylesheet" href="./src/componentes/pages/Curso/curso.css" />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
@@ -170,18 +170,18 @@
         <section id="IA">
           <h1 id="h1-ia"> <i class="fa-solid fa-book"></i> Cronograma de Estudos - Vestibulinho Etec</h1>
 
-        <div class="ia-subtitulo">
+          <div class="ia-subtitulo">
             A organização dos estudos para o Vestibulinho é um desafio? Conheça a ferramenta perfeita: uma IA <br>
             que cria seu cronograma personalizado, usando como base os dias e horas que você tem disponíveis.
-        </div>
+          </div>
 
-        <input type="text" class="input-ia" id="dias" placeholder="Dias até a prova">
-        <input type="text" class="input-ia" id="horas" placeholder="Horas disponíveis por dia">
-        <br>
-        <button class="botao-ia" id="gerar">Gerar Cronograma</button>
+          <input type="text" class="input-ia" id="dias" placeholder="Dias até a prova">
+          <input type="text" class="input-ia" id="horas" placeholder="Horas disponíveis por dia">
+          <br>
+          <button class="botao-ia" id="gerar">Gerar Cronograma</button>
 
-        <!-- Exibição do resultado -->
-        <pre id="resultado">
+          <!-- Exibição do resultado -->
+          <pre id="resultado">
             <div class="loader" id="loader">
                <span></span>
                <span></span>
@@ -189,30 +189,31 @@
             </div>
           </pre>
 
-        <button class="botao-ia" id="gerar-pdf" style="display: none;">Gerar PDF</button>
+          <button class="botao-ia" id="gerar-pdf" style="display: none;">Gerar PDF</button>
         </section>
 
         <section id="calendario">
-            <div class="main">
-              <div class="custom-calendar-wrap">
-                <div id="custom-inner" class="custom-inner">
-                  <div class="custom-header clearfix">
-                    <nav>
-                      <span id="custom-prev" class="custom-prev"></span>
-                      <span id="custom-next" class="custom-next"></span>
-                    </nav>
-                    <h2 id="custom-month" class="custom-month"></h2>
-                    <h3 id="custom-year" class="custom-year"></h3>
-                  </div>
-                  <div id="calendar" class="fc-calendar-container"></div>
+          <div class="main">
+            <div class="custom-calendar-wrap">
+              <div id="custom-inner" class="custom-inner">
+                <div class="custom-header clearfix">
+                  <nav>
+                    <span id="custom-prev" class="custom-prev"></span>
+                    <span id="custom-next" class="custom-next"></span>
+                  </nav>
+                  <h2 id="custom-month" class="custom-month"></h2>
+                  <h3 id="custom-year" class="custom-year"></h3>
                 </div>
+                <div id="calendar" class="fc-calendar-container"></div>
               </div>
             </div>
+          </div>
         </section>
 
         <section id="maps">
           <h1 class="titleMap"> Unidades AMS - ETEC</h1>
-          <div class="subtitulo-maps">Quer encontrar a ETEC com AMS mais próxima de você? É fácil! Digite seu CEP no campo
+          <div class="subtitulo-maps">Quer encontrar a ETEC com AMS mais próxima de você? É fácil! Digite seu CEP no
+            campo
             abaixo e descubra!</div>
 
           <!-- para buscar endereço (digitar cep e botão para buscar)-->
@@ -306,13 +307,23 @@
 
   <script src="./src/componentes/MAPS/maps.js"></script>
 
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+
+  <script src="js/jquery.calendario.js"></script>
+  <script src="js/init.js"></script>
   <script src="./src/componentes/Calendario/calendario.js"></script>
   <script src="./src/componentes/Calendario/template.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="./src/componentes/IA/ia.js"></script>
 
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGjNnTxy2WjE_Srf0W8PlEzl_COym3_ho&callback=inicializarMapa"></script>
+
 
    
   <script>

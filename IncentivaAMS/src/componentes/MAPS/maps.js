@@ -9,14 +9,14 @@ const marcadores = []; //lista de marcadores criados (unidade, infowindow, marke
 let marcadorDestaque = null; //indica a unidade mais proxima
 let marcadorOrigem = null;
 let iconUnidade, etecProxima, iconOrigem;
-  
+
 
 //FUNÇÃO inicializarMapa()
 //inicializando e chamando a api
 function inicializarMapa() {
   //cria o mapa e o zoom inicial
   mapa = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -23.5505, lng: -46.6333},
+    center: { lat: -23.5505, lng: -46.6333 },
     zoom: 11,
   });
 
@@ -60,28 +60,28 @@ function inicializarMapa() {
   //conecta o botão de busca pelo id
   const btn = document.getElementById("btn-buscar");
   const input = document.getElementById("endereço");
-  btn.addEventListener("click", () => { 
+  btn.addEventListener("click", () => {
     const query = input.value.trim();
     if (!query) {
       alert("Digite um CEP ou endereço para buscar! ");
       return;
     }
 
-     if (marcadorDestaque) {
-    marcadorDestaque.setMap(null);
-    marcadorDestaque = null;
-  }
+    if (marcadorDestaque) {
+      marcadorDestaque.setMap(null);
+      marcadorDestaque = null;
+    }
 
-  // Remove marcador de origem anterior
-  if (marcadorOrigem) {
-    marcadorOrigem.setMap(null);
-    marcadorOrigem = null;
-  }
+    // Remove marcador de origem anterior
+    if (marcadorOrigem) {
+      marcadorOrigem.setMap(null);
+      marcadorOrigem = null;
+    }
 
-  // Reseta todos os ícones das unidades para o padrão
-  for (const m of marcadores) {
-    m.marker.setIcon(iconUnidade);
-  }
+    // Reseta todos os ícones das unidades para o padrão
+    for (const m of marcadores) {
+      m.marker.setIcon(iconUnidade);
+    }
 
     buscarMaisProxima(query);
   });
@@ -96,7 +96,7 @@ function inicializarMapa() {
 //cria marcadores no mapa para cada unidade
 async function carregarUnidades() {
   try {
-    const res = await fetch("unidades.json");
+    const res = await fetch("src/componentes/MAPS/unidades.json");
     if (!res.ok) throw new Error("Falha ao carregar unidades.json");
     const json = await res.json();
     const unidades = json.unidades || [];
@@ -110,18 +110,19 @@ async function carregarUnidades() {
 
     // usar coordenadas ja existentes para cada unidade, caso não tenha, geocodificar
     for (const u of unidades) {
-      if (cache[u.id]) {
-        // se já tem no cache, usa direto
-        u.lat = cache[u.id].lat;
-        u.lng = cache[u.id].lng;
+      // criar uma chave segura para cache: id > nome > endereco
+      const cacheKey = (u.id ?? u.nome ?? u.endereco).toString();
+
+      if (cache[cacheKey]) {
+        u.lat = cache[cacheKey].lat;
+        u.lng = cache[cacheKey].lng;
         criarMarcadorParaUnidade(u);
       } else {
-        // se não tem, pede ao geocoder
         const coords = await geocodificarEndereco(u.endereco);
         if (coords) {
           u.lat = coords.lat;
           u.lng = coords.lng;
-          cache[u.id] = { lat: coords.lat, lng: coords.lng };
+          cache[cacheKey] = { lat: coords.lat, lng: coords.lng };
           localStorage.setItem("unidades_cache", JSON.stringify(cache));
           criarMarcadorParaUnidade(u);
         } else {
@@ -177,14 +178,10 @@ function criarMarcadorParaUnidade(unidade) {
 
   //quando clicar no marcador, abrir o infowindow (e fechar o anterior caso tenha)
   marker.addListener("click", () => {
-    //fecha todas as abertas
-    for (const m of marcadores) {
-      m.infoWindow.close();
-    }
+    for (const m of marcadores) m.infoWindow.close();
     infoWindow.open(mapa, marker);
   });
-
-  //teste
+  // Armazena a relação 1:1 entre unidade, marker e infowindow
   marcadores.push({ unidade, marker, infoWindow });
 }
 
@@ -244,7 +241,8 @@ function buscarMaisProxima(query) {
 function destacarUnidadeETraçarRota(origem, obj) {
   const unidade = obj.unidade;
   const destino = { lat: obj.lat, lng: obj.lng };
-  const endereco = endereço;
+
+  if (marcadorOrigem) marcadorOrigem.setMap(null);
 
   if (marcadorDestaque) {
     marcadorDestaque.setMap(null);
@@ -262,6 +260,8 @@ function destacarUnidadeETraçarRota(origem, obj) {
     title: "endereço",
     icon: iconOrigem
   });
+
+  for (const m of marcadores) m.marker.setIcon(iconUnidade);
 
   //cria o marcador de destaque no destino
   marcadorDestaque = new google.maps.Marker({

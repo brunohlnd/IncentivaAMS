@@ -20,7 +20,7 @@ document.getElementById("gerar").addEventListener("click", async () => {
   // --- 2. Carregamento do Conteúdo JSON ---
   let conteudo;
   try {
-    conteudo = await fetch("conteudo.json")
+    conteudo = await fetch("src/componentes/IA/conteudo.json")
       .then(res => res.json())
       .catch(err => {
         console.error("Erro ao carregar o JSON de conteúdos: ", err);
