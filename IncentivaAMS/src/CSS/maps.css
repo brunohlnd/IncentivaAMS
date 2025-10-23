@@ -1,0 +1,85 @@
+.titleMap {
+      color: #800115;
+      padding: 10px;
+      margin: 0;
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 30px;
+    }
+
+    .subtitulo-maps {
+      color: #800115;
+      padding: 8px;
+      margin: 1px 0 10px 0;
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      margin-top: -12px;
+    }
+
+    #map {
+      width: 100%;
+      height: 350px;
+    }
+
+    .controls {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      margin: 20px auto;
+    }
+
+    #endereço {
+      width: 100%;
+      padding: 10px 40px 10px 10px;
+      box-sizing: border-box;
+      font-size: 15px;
+    }
+
+    #btn-buscar {
+      position: absolute; /* Posiciona o botão de forma absoluta em relação a .controls */
+      margin-right: 10px;
+      top: 20px; /* Começa a 50% da altura do contêiner */
+      right: 5px; /* Posição a partir da direita */
+      transform: translateY(-50%); /* Move o botão para cima em 50% de sua própria altura para centralizar verticalmente */
+      border: none;
+      background: none; /* Remove o fundo padrão do botão */
+      cursor: pointer;
+      padding: 0;
+      color: #800115; /* Cor do ícone */
+
+    }
+
+    #endereço {
+      flex: 1;
+      padding: 8px;
+      font-size: 14px;
+      border: 1px solid #800115;
+      border-radius: 50px;
+      width: 100%;
+
+      margin-top: 15px;
+      margin-bottom: 15px;
+      margin-left: 10px;
+    }
+
+    #endereço::placeholder {
+      font-family: "Montserrat", sans-serif;
+      color: #cccccc;
+      padding-left: 10px;
+    }
+
+    #endereço:focus {
+    border: 2px solid #800115;
+    outline: none;
+    }
+
+    #btn-buscar {
+      padding: 8px 12px;
+      cursor: pointer;
+      border: none;
+    }
+
+  

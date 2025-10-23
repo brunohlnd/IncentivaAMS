@@ -2,10 +2,10 @@
 :root {
   --vinho: #800116;
   --vinhozinho: #BB0221;
-  --vermelho: #CC0002;
+  --rosa-claro: #ffecf1;
+  --rosa-clarinho: #fceff2;
   --preto: #000000;
   --branco: #FFFFFF;
-  --fundo: #fff3f3
 }
 
 * {
@@ -15,16 +15,15 @@
   font-family: "Montserrat", sans-serif;
 }
 
-#container {
-  background-color: #fff3f3;
+body {
   display: flex;
-  position: relative;
   flex-direction: column;
-  min-height: 100vh;
-  width: 100%;
 }
 
-.meio {
-  display: flex;
-  flex-direction: row;
+#container {
+  background-color: var(--rosa-claro);
+}
+
+.titulos {
+  font-weight: bold;
 }

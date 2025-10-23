@@ -1,14 +1,14 @@
 #header {
-    margin: 0;
+    z-index: 3;
     padding: 1rem;
     display: flex;
     background-color: var(--vinho);
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 0 0 50px 50px;
+    border-radius: 0 0 40px 40px;
     justify-content: end;
     gap: 5px;
     align-items: center;
-    color: var(--vinho);
+    color: var(--rosa-clarinho);
 }
 
 #logo {

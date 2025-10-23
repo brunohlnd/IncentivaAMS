@@ -1,12 +1,12 @@
 .MVVDiv {
-    margin: 1rem 0;
+    margin: 1rem 0 3rem 0;
     display: flex;
     justify-content: space-between;
     gap: 5%;
 }
 
 .MVVdivs {
-    height: 20rem;
+    height: auto;
     width: 30%;
     background-color: var(--branco);
     padding: 2rem;

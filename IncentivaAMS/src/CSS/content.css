@@ -1,0 +1,14 @@
+#content {
+    z-index: 1;
+    display: flex;
+    position: relative;
+    top: 50%;
+    left: 5%;
+    width: 90%;
+    min-height: 100vh;
+    flex-grow: 1;
+    padding: 3rem;
+    background-color: var(--fundo);
+    justify-content: center;
+    color: var(--vinho);
+}
