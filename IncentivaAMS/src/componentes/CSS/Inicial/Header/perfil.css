@@ -1,6 +1,6 @@
 #perfil {
-    background-color: #fff;
-    border: 1px solid var(--vinho);
+    background-color: var(--vinho);
+    border: 1px solid var(--branco);
     padding: 15px;
     height: 40px;
     width: 40px;
@@ -14,14 +14,14 @@
 }
 
 #perfil i {
-    color: var(--vinho);
+    color: var(--branco);
 }
 
 #perfil:hover {
-    background-color: var(--vinho);
+    background-color: var(--branco);
     cursor: pointer;
 }
 
 #perfil:hover i {
-    color: #fff;
+    color: var(--vinho);
 }

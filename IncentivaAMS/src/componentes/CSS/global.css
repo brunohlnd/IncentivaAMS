@@ -3,11 +3,9 @@
   --vinho: #800116;
   --vinhozinho: #BB0221;
   --vermelho: #CC0002;
-  --laranja: #FF442B;
-  --amarelo: #FAB800;
   --preto: #000000;
-  --cinza: #F2F2F2;
   --branco: #FFFFFF;
+  --fundo: #fff3f3
 }
 
 * {
@@ -17,74 +15,16 @@
   font-family: "Montserrat", sans-serif;
 }
 
-/* ======================================================= */
-/* 1. PADRÃO / DESKTOP (Aplicado a partir de 768px - Mobile-First) */
-/* Este é o seu layout original. */
-/* ======================================================= */
 #container {
-  background-color: var(--cinza);
-  display: grid;
-  height: 100vh;
-  gap: 10px 10px;
-
-  /* Desktop: 6% (Sidebar estreita) e 1fr (Conteúdo) */
-  grid-template-columns: 6% 1fr;
-  /* Linhas: Header, Principal, Footer */
-  grid-template-rows: auto 4fr auto;
+  background-color: #fff3f3;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
 }
 
-/* Regras de Posicionamento Padrão (Válidas para os dois layouts) */
-.item:nth-child(1),
-/* Header */
-.item:nth-child(4) {
-  /* Footer */
-  grid-column: 1 / 3;
-  /* Ocupa as duas colunas */
-}
-
-.item:nth-child(2) {
-  /* Sidebar */
-  grid-column: 1;
-  /* Fica na primeira coluna */
-  grid-row: 2;
-  /* Fica na segunda linha */
-  align-self: stretch;
-  /* Estica na altura */
-}
-
-.item:nth-child(3) {
-  align-self: stretch;
-}
-
-/* O item 3 (Conteúdo principal) fica automaticamente na segunda coluna da segunda linha. */
-
-
-/* ======================================================= */
-/* 2. MOBILE (max-width: 767px)                            */
-/* Ajusta as colunas para telas pequenas, mantendo o lado a lado. */
-/* ======================================================= */
-@media (max-width: 767px) {
-  #container {
-    /*
-         * Ajuste para Mobile:
-         * Aumenta a sidebar para 15% ou 80px (largura fixa)
-         * para que seja usável em telas estreitas.
-         */
-    grid-template-columns: 80px 1fr;
-    grid-template-rows: auto 4fr auto;
-
-    /* A altura 100vh pode ser problemática no mobile (barra de endereço flutuante). 
-           Mudar para 'auto' ou 'min-height: 100vh' é uma boa prática aqui: */
-    min-height: 100vh;
-
-    /* O restante do layout (linhas e posicionamento) é herdado e continua válido. */
-  }
-
-  /* Outros ajustes comuns para mobile: */
-  .item {
-    font-size: 0.9em;
-    /* Reduz um pouco a fonte */
-    padding: 5px;
-    /* Reduz o padding interno */
-  }
+.meio {
+  display: flex;
+  flex-direction: row;
 }
