@@ -22,4 +22,5 @@ O site é o hub central que apoia e concentra todas as nossas ações de divulga
 O site é a base digital do projeto e foi desenvolvido com foco em performance e simplicidade:
 * HTML, CSS e JavaScript: Utilizados para construir uma interface leve, rápida e totalmente responsiva.
 * PHP e MySQL: Utilizados para a criação e comunicação do banco de dados com o cadastro/login.
+* APIs: Utilizadas para criar funcionalidades que auxiliam o usuário na preparação para o vestibulinho Etec. São elas: Gemini, Maps e Calendário — Todas do Google.
 
