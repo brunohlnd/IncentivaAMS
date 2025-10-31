@@ -8,10 +8,16 @@
 .MVVdivs {
     height: auto;
     width: 30%;
-    background-color: var(--branco);
+    background-color: var(--rosa-clarinho);
     padding: 2rem;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.MVVdivs:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .item-img {

@@ -1,6 +1,6 @@
 document.getElementById("gerar").addEventListener("click", async () => {
 
-  // --- 1. Captura de Valores e Elementos ---
+  // Captura de Valores e Elementos
   const dias = document.getElementById("dias").value;
   const horas = document.getElementById("horas").value;
 
@@ -17,7 +17,7 @@ document.getElementById("gerar").addEventListener("click", async () => {
   }
 
 
-  // --- 2. Carregamento do Conteúdo JSON ---
+  // Carregamento do JSON
   let conteudo;
   try {
     conteudo = await fetch("src/componentes/IA/conteudo.json")
@@ -32,7 +32,7 @@ document.getElementById("gerar").addEventListener("click", async () => {
     return;
   }
 
-  // --- 3. Montagem do Prompt da IA ---
+  // Prompt da IA
   const prompt = `Monte um cronograma de estudo para a ETEC baseado no JSON abaixo.
     Distribua o tempo disponível (dias: ${dias}, horas por dia: ${horas}) respeitando os
     pesos das matérias e tambem quero que mostra separadamente objetivo de estudar tal materia
@@ -47,10 +47,10 @@ document.getElementById("gerar").addEventListener("click", async () => {
     Eu quero apenas que você me mande o cronograma, não comente sobre o codigo ou algo a mais , apenas a resposta.
   ${JSON.stringify({ dias_ate_prova: dias, horas_por_dia: horas, materias: conteudo })}`;
 
-  const API_KEY = "AIzaSyBEywh7QH0w1GDe0CxC1fLf9ul3WiBft0s"; 
+  const API_KEY = "AIzaSyBEywh7QH0w1GDe0CxC1fLf9ul3WiBft0s";
   const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
 
-  // --- 4. Requisição à API ---
+  // Requisição da API
   try {
     const resultadoDaApi = await fetch(API_URL, {
       method: "POST",
@@ -73,17 +73,12 @@ document.getElementById("gerar").addEventListener("click", async () => {
     const data = await resultadoDaApi.json();
     const text = data?.candidates?.[0]?.content?.parts?.[0]?.text || "Não consegui gerar um cronograma";
 
-    // *** ESTE É O PASSO PRINCIPAL ***
-    // 1. O prompt foi ajustado para PEDIR Markdown.
-    // 2. marked.parse() converte o texto Markdown da IA para HTML.
+    // Converte o texto Markdown da IA para HTML
     const htmlCronograma = marked.parse(text);
 
-    // 3. Inserir o HTML limpo e formatado no elemento.
+    // Insere o HTML limpo e formatado no elemento
     resultado.innerHTML = `<div class="response">${htmlCronograma}</div>`;
     document.getElementById("gerar-pdf").style.display = "inline-block";
-
-    // *** Opcional: Adicionar algum estilo para o H2 gerado pelo Markdown
-    // Você pode estilizar a classe .response H2 no seu CSS (ex: border-bottom)
 
   } catch (err) {
     loader.classList.remove("show")
@@ -105,7 +100,7 @@ document.getElementById("gerar-pdf").addEventListener("click", () => {
     const imgData = canvas.toDataURL("image/png");
     const pdf = new jsPDF("p", "mm", "a4");
 
-    //Definições da Página e Margens
+    // Definições da Página e Margens
     const pdfWidth = pdf.internal.pageSize.getWidth();
     const pdfHeight = pdf.internal.pageSize.getHeight();
     const margin = 10;
@@ -118,7 +113,7 @@ document.getElementById("gerar-pdf").addEventListener("click", () => {
     let heightLeft = imgPdfHeight; // Altura total restante da imagem
     let currentYPosition = margin; // Posição Y inicial na página
 
-    //Adicionar Título
+    // Adiciona o Título
     const title = "Cronograma de Estudos - Vestibulinho ETEC";
     pdf.setFontSize(16);
     pdf.text(title, margin, margin + 5); // Adiciona o título um pouco abaixo da margem
@@ -129,7 +124,7 @@ document.getElementById("gerar-pdf").addEventListener("click", () => {
     // Altura da área de conteúdo útil (altura total - margem superior - margem inferior)
     const pageContentHeight = pdfHeight - (2 * margin);
 
-    // Adicionar a Imagem (Primeira Página)
+    // Adiciona a Imagem (Primeira Página)
     // A posição X é a margem. A posição Y é a margem + a altura do título.
     pdf.addImage(imgData, "PNG", margin, currentYPosition, imgPdfWidth, imgPdfHeight);
 
@@ -139,7 +134,7 @@ document.getElementById("gerar-pdf").addEventListener("click", () => {
     // A posição Y para "rolar" a imagem na próxima página é negativa
     let imagePositionY = currentYPosition - pageContentHeight;
 
-    // 5. Loop para Quebrar Páginas
+    // Loop para Quebrar Páginas
     while (heightLeft > 0) {
       pdf.addPage();
 

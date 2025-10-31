@@ -5,9 +5,7 @@ $(function () {
         months: [
             'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
             'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
-        ],
-
-    
+        ],    
 });
 
 //navegação entre os meses

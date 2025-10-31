@@ -2,7 +2,7 @@
     position: fixed;
     left: 1rem;
     top: 7rem;
-    z-index: 2;
+    z-index: 1;
     width: 60px;
     height: min-content;
     background-color: var(--vinho);
@@ -72,4 +72,19 @@
 
 #phone-icon {
     padding-left: 2px;
+}
+
+@media (max-width: 767px) {
+
+    #sidebar {
+        left: 0;
+        width: 50px;
+        border-radius: 0 20px 20px 0;
+    }
+
+    #sidebar ul {
+       position: relative;
+       right: 5px;
+    }
+
 }

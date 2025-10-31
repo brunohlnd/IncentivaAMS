@@ -9,29 +9,22 @@
 
   <!-- Estilização -->
   <link rel="stylesheet" href="./src/CSS/global.css" />
-
-  <link rel="stylesheet" href="./src/CSS/Inicial/inicial.css" />
-  <link rel="stylesheet" href="./src/CSS/Inicial/Header/header.css" />
-  <link rel="stylesheet" href="./src/CSS/Inicial/Header/search.css" />
-  <link rel="stylesheet" href="./src/CSS/Inicial/Header/perfil.css" />
-  <link rel="stylesheet" href="./Cadastro/cadastro.css" />
-  <link rel="stylesheet" href="./src/CSS/Contato/contato.css" />
-
-  <link rel="stylesheet" href="./src/CSS/Equipe/equipe.css">
-
   <link rel="stylesheet" href="./src/CSS/sidebar.css" />
-
   <link rel="stylesheet" href="./src/CSS/content.css" />
-  <link rel="stylesheet" href="./src/CSS/trajetoria.css" />
-
   <link rel="stylesheet" href="./src/CSS/footer.css" />
 
-  <link rel="stylesheet" href="./src/CSS/maps.css" />
+  <link rel="stylesheet" href="./src/componentes/pages/Inicial/inicial.css" />
+  <link rel="stylesheet" href="./src/componentes/pages/Inicial/Header/header.css" />
+  <link rel="stylesheet" href="./src/componentes/pages/Inicial/Header/search.css" />
+  <link rel="stylesheet" href="./src/componentes/pages/Inicial/Header/perfil.css" />
 
+  <link rel="stylesheet" href="./src/componentes/Cadastro/cadastro.css" />
+  <link rel="stylesheet" href="./src/componentes/pages/Contato/contato.css" />
+  <link rel="stylesheet" href="./src/componentes/pages/Equipe/equipe.css" />
+  <link rel="stylesheet" href="./src/componentes/Trajetoria/trajetoria.css" />
+  <link rel="stylesheet" href="./src/componentes/Maps/maps.css" />
   <link rel="stylesheet" href="./src/componentes/Calendario/calendario.css" />
-
   <link rel="stylesheet" href="./src/componentes/IA/ia.css" />
-
   <link rel="stylesheet" href="./src/componentes/pages/Curso/curso.css" />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -113,24 +106,6 @@
         </li>
 
         <li>
-          <a href="#equipe" class="nav-link">
-            <span class="item-icon">
-              <i class="fa-solid fa-user-group"></i>
-            </span>
-            <span class="item-txt">EQUIPE</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="#contato" class="nav-link">
-            <span class="item-icon">
-              <i id="phone-icon" class="fa-solid fa-phone"></i>
-            </span>
-            <span class="item-txt">CONTATO</span>
-          </a>
-        </li>
-
-        <li>
           <a href="#IA" class="nav-link">
             <span class="item-icon"> <i class="fa-solid fa-robot"></i> </span>
             <span class="item-txt">CRONOGRAMA</span>
@@ -154,6 +129,24 @@
             <span class="item-txt">MAPA</span>
           </a>
         </li>
+
+        <li>
+          <a href="#equipe" class="nav-link">
+            <span class="item-icon">
+              <i class="fa-solid fa-user-group"></i>
+            </span>
+            <span class="item-txt">EQUIPE</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#contato" class="nav-link">
+            <span class="item-icon">
+              <i id="phone-icon" class="fa-solid fa-phone"></i>
+            </span>
+            <span class="item-txt">CONTATO</span>
+          </a>
+        </li>
       </ul>
     </div>
 
@@ -168,22 +161,23 @@
         <section id="contato"></section>
 
         <section id="IA">
-          <h1 id="h1-ia"> <i class="fa-solid fa-book"></i> Cronograma de Estudos - Vestibulinho Etec</h1>
+          <div id="divIA">
+            <h1 id="h1-ia"> <i class="fa-solid fa-book"></i> Cronograma de Estudos - Vestibulinho Etec</h1>
 
-          <div class="ia-subtitulo">
-            A organização dos estudos para o Vestibulinho é um desafio? Conheça a ferramenta perfeita: uma IA <br>
-            que cria seu cronograma personalizado, usando como base os dias e horas que você tem disponíveis.
-          </div>
+            <div class="ia-subtitulo">
+              A organização dos estudos para o Vestibulinho é um desafio? Conheça a ferramenta perfeita: uma IA <br>
+              que cria seu cronograma personalizado, usando como base os dias e horas que você tem disponíveis.
+            </div>
 
-          <div id="inputs-ia">
-            <input type="text" class="input-ia" id="dias" placeholder="Dias até a prova">
-            <input type="text" class="input-ia" id="horas" placeholder="Horas disponíveis por dia">
-          </div>
+            <div id="inputs-ia">
+              <input type="text" class="input-ia" id="dias" placeholder="Dias até a prova">
+              <input type="text" class="input-ia" id="horas" placeholder="Horas disponíveis por dia">
+            </div>
 
-          <button class="botao-ia" id="gerar">Gerar Cronograma</button>
+            <button class="botao-ia" id="gerar">Gerar Cronograma</button>
 
-          <!-- Exibição do resultado -->
-          <pre id="resultado">
+            <!-- Exibição do resultado -->
+            <pre id="resultado">
             <div class="loader" id="loader">
                <span></span>
                <span></span>
@@ -191,7 +185,8 @@
             </div>
           </pre>
 
-          <button class="botao-ia" id="gerar-pdf" style="display: none;">Gerar PDF</button>
+            <button class="botao-ia" id="gerar-pdf" style="display: none;">Gerar PDF</button>
+          </div>
         </section>
 
         <section id="calendario">
@@ -210,6 +205,8 @@
               </div>
             </div>
           </div>
+          <div id="div-link"><a id="link-calendario" target="_blank"
+              href="https://giiov.github.io/api_calendario/">Visualize o calendário completo!</a></div>
         </section>
 
         <section id="maps">
@@ -230,8 +227,6 @@
 
       </main>
     </div>
-
-    <div class="item" id="footer">&copy; 2025 IncentivaAMS</div>
   </div>
 
   <!-- Modal -->
@@ -257,28 +252,30 @@
                 <div class="input-box">
                   <div class="icons">
                     <i class="fa-solid fa-user"></i>
-                    <input type="text" id="nome" name="name" placeholder=" Nome Completo"></input>
+                    <input class="input-cadastro" type="text" id="nome" name="name"
+                      placeholder=" Nome Completo"></input>
                   </div>
 
                   <p></p>
 
                   <div class="icons">
                     <i class="fa-solid fa-envelope"></i>
-                    <input type="email" id="email" name="email" placeholder=" E-mail">
+                    <input class="input-cadastro" type="email" id="email" name="email" placeholder=" E-mail">
                   </div>
 
                   <p></p>
 
                   <div class="icons">
                     <i class="fa-solid fa-phone"></i>
-                    <input type="number" id="tel" name="tel" placeholder=" Telefone">
+                    <input class="input-cadastro" type="number" id="tel" name="tel" placeholder=" Telefone">
                   </div>
 
                   <p></p>
 
                   <div class="icons">
                     <i class="fa-solid fa-lock"></i>
-                    <input type="password" id="senha" name="senhaUser" placeholder=" Senha" min="8" max="10">
+                    <input class="input-cadastro" type="password" id="senha" name="senhaUser" placeholder=" Senha"
+                      min="8" max="10">
                   </div>
                 </div>
 
@@ -296,32 +293,34 @@
     </div>
   </div>
 
-  <!-- Puxando os scripts -->
-  <script src="./src/componentes/pages/Inicial/inicial.js"></script>
-  <script src="./src/componentes/search.js"></script>
-  <script src="./src/componentes/trajetoria.js"></script>
-   
-  <script src="./src/componentes/pages/Curso/curso.js"></script>
-   
-  <script src="./src/componentes/pages/equipe.js"></script>
-   
-  <script src="./src/componentes/pages/contato.js"></script>
+  <div class="item" id="footer">&copy; 2025 IncentivaAMS</div>
 
-  <script src="./src/componentes/MAPS/maps.js"></script>
+
+  <!-- Puxando os scripts -->
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="js/init.js"></script>
+
+  <script src="./src/componentes/pages/Inicial/inicial.js"></script>
+  <script src="./src/componentes/pages/Inicial/Header/search.js"></script>
+  <script src="./src/componentes/Trajetoria/trajetoria.js"></script>
+  <script src="./src/componentes/pages/Curso/curso.js"></script>
+  <script src="./src/componentes/pages/Equipe/equipe.js"></script>
+  <script src="./src/componentes/pages/Contato/contato.js"></script>
+
+  <script src="./src/componentes/Maps/maps.js"></script>
+  <script src="./src/componentes/Calendario/calendario.js"></script>
+  <script src="./src/componentes/Calendario/template.js"></script>
+  <script src="./src/componentes/IA/ia.js"></script>
 
   <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 
-
-  <script src="js/jquery.calendario.js"></script>
   <script src="js/init.js"></script>
   <script src="./src/componentes/Calendario/calendario.js"></script>
   <script src="./src/componentes/Calendario/template.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="./src/componentes/IA/ia.js"></script>
 
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGjNnTxy2WjE_Srf0W8PlEzl_COym3_ho&callback=inicializarMapa"></script>

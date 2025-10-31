@@ -24,20 +24,13 @@
 /* Box que mostra a descrição do ano */
 .descricao {
     background-color: var(--branco);
-    /* Fundo branco */
     padding: 15px;
-    /* Aumenta o espaçamento interno */
     border-radius: 8px;
-    /* Cantos bem arredondados */
     box-shadow: 0 4px 10px #ffe3e7;
-    /* Sombra mais destacada */
-    border: 1px solid var(--cinza);
-    /* Adiciona uma borda fina para definição */
+    border: 1px solid var(--cinza); /* Adiciona uma borda fina para definição */
     transition: all 0.3s ease;
     position: absolute;
-    /* Mantenha o posicionamento absoluto */
-    top: 55px;
-    /* Altere este valor para mover a caixa para baixo */
+    top: 55px; /* Move a caixa para baixo */
     width: 250px;
 }
 
@@ -57,8 +50,16 @@
 }
 
 /* Responsividade para mobile */
-@media (max-width: 600px) {
+@media (max-width: 767px) {
     .icone i {
         font-size: 40px;
+    }
+
+    .descricao {
+        width: 150px;
+    }
+
+    .trajetoria-container {
+        height: 23rem;
     }
 }
